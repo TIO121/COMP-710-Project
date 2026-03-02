@@ -8,7 +8,7 @@ function NavigationvBar(){
             </div>
             <ul class ="nav-links">
                 <li class= "dropdown">
-                    <a href="#">Mathematics</a>
+                    <a href="#">Mathematics <span class="arrow"> ^</span> </a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Algebra</a></li>
                         <li><a href="#">Calculus</a></li>
@@ -47,7 +47,9 @@ function NavigationvBar(){
                         <li><a href="#">Data Science</a></li>
                     </ul>
                 </li>
-            
+                <li>
+                    <a href="#"> Ask a Question</a>
+                </li>
             </ul>
         </div>
     )

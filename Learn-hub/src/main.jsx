@@ -4,10 +4,13 @@ import './index.css'
 import App from './App.jsx'
 import NavigationvBar from './UI/navigationBar.jsx'
 import Homepage from './UI/mainPage.jsx'
+import { AskQuestion } from './UI/question.jsx'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <NavigationvBar/>
-    <Homepage />
+    <AskQuestion/>
+    {/* <NavigationvBar/>
+    <Homepage /> */}
   </StrictMode>,
 )
