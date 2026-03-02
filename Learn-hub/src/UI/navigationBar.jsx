@@ -4,7 +4,7 @@ function NavigationvBar(){
     return(
         <div class="navbar">
             <div class ="Logo">
-               <p>logo</p>
+               <a href="#">LearnHub</a>
             </div>
             <ul class ="nav-links">
                 <li class= "dropdown">
