@@ -9,7 +9,7 @@ import { AskQuestion } from './UI/question.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AskQuestion/>
+    <Homepage/>
     {/* <NavigationvBar/>
     <Homepage /> */}
   </StrictMode>,
