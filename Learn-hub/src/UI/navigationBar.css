@@ -1,75 +1,129 @@
-import  "./mainPage.css"
-
-function Homepage(){
-    return(
-       <>
-         <section class= "hero">
-            <h1>Welcome to LearnHub</h1>
-            <p>Your comprehensive online learning platform. Explore a wide range of subjects,
-            from mathematics to computer science, all in one place.</p>
-            <button>Start learning &#8594; </button>
-        </section>
-
-        <h2 class="section-title">Explore Our Subjects</h2>
-
-        <section class="subjects">
-            <div class="card">
-                <div class="icon math">📐</div>
-                <h4>Mathematics</h4>
-            </div>
-
-            <div class="card">
-                <div class="icon science">🔬</div>
-                <h4>Science</h4>
-            </div>
-
-            <div class="card">
-                <div class="icon history">📜</div>
-                <h4>History</h4>
-            </div>
-
-            <div class="card">
-                <div class="icon language">🗣️</div>
-                <h4>Languages</h4>
-            </div>
-
-            <div class="card">
-                <div class="icon cs">💻</div>
-                <h4>Computer Science</h4>
-            </div>
-        </section>
-
-        <section class="why">
-        <h2 class="section-title">Why Choose LearnHub?</h2>
-
-        <div class="features">
-            <div class="feature-box">
-                <h3>Expert Content</h3>
-                <p>High-quality lessons created by experienced educators.</p>
-            </div>
-
-            <div class="feature-box">
-                <h3>Flexible Learning</h3>
-                <p>Study at your own pace anytime, anywhere.</p>
-            </div>
-
-            <div class="feature-box">
-                <h3>Interactive Practice</h3>
-                <p>Engaging quizzes and exercises to reinforce learning.</p>
-            </div>
-        </div>
-        </section>
-
-        <section class = "journey">
-            
-            <h3 >Ready to start your learning journey? </h3>
-            <p>Choose a subject from the navigation menu above and dive into comprehensive lessons designed to help you master any topic.</p>
-            <button class = "journey-button">Browse All Topics</button>
-        </section>
-
-       </>
-
-    )
+/* NAVBAR */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    padding: 0px 120px;
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 1000;
 }
 
-export default Homepage
+/* BRAND — LearnHub logo + text */
+.navbar .brand{
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transform: translateY(-2px); /* move LearnHub up slightly */
+}
+
+/* Wrapper to push subjects to the right */
+.Logo{
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO IMAGE */
+.brand-logo{
+    height: 57px;
+    width: auto;
+    display: inline-block;
+    transform: translateY(2px); /* align logo with text */
+}
+
+/* NAV LINKS (Mathematics, Science, etc.) */
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.nav-links li{
+    position: relative;
+}
+
+.nav-links a{
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 450;   /* THIS NOW WORKS */
+    font-size: 15px;
+    font-family: segoe UI, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover{
+    background-color: #f2f2f2;
+}
+
+/* GLOBAL NAVBAR LINK STYLE (no font-weight override) */
+.navbar a {
+    color: black;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+}
+
+/* ICON SIZE + ALIGNMENT FIX */
+.nav-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* ARROW */
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 1;
+    margin-left: 2px;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu{
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 6px;
+    background-color: white;
+    border-radius: 8px;
+    min-width: 160px;
+    padding: 6px 0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    border: 1px solid #e5e5e5;
+    z-index: 1000;
+}
+
+/* DROPDOWN ITEMS */
+.dropdown-menu li a{
+    padding: 8px 12px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover{
+    background-color: #f0f4ff;
+    color: #2a6df4;
+}
+
+/* SHOW DROPDOWN */
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
