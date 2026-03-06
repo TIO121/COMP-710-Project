@@ -1,57 +1,42 @@
+export function AskQuestion(){
+    return (
+        <>
+            <section class="heading">
+                <h1> Ask a Question</h1>
+                <p1>Get instant answers to your study questions</p1>
+                 <div class ="Toggle">
+                    <label >Ask Question</label>
+                    <label>Browse Q/A</label>
+                </div>
+            </section>
 
-import "./navigationBar.css"
-function NavigationvBar(){
-    return(
-        <div class="navbar">
-            <div class ="Logo">
-               <a href="#">LearnHub</a>
-            </div>
-            <ul class ="nav-links">
-                <li class= "dropdown">
-                    <a href="#">Mathematics <span class="arrow"> ^</span> </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Algebra</a></li>
-                        <li><a href="#">Calculus</a></li>
-                        <li><a href="#">Geometry</a></li>
-                    </ul>
-                </li>
-                  <li class= "dropdown">
-                    <a href="#">Science</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Physics</a></li>
-                        <li><a href="#">Chemistry</a></li>
-                        <li><a href="#">Biology</a></li>
-                    </ul>
-                </li>
-                  <li class= "dropdown">
-                    <a href="#">History</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Ancient History</a></li>
-                        <li><a href="#">Medival History</a></li>
-                        <li><a href="#">Modern History</a></li>
-                    </ul>
-                </li>
-                  <li class= "dropdown">
-                    <a href="#">Languages</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">Spanish</a></li>
-                        <li><a href="#">French</a></li>
-                    </ul>
-                </li>
-                  <li class= "dropdown">
-                    <a href="#">Computer Science</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Programming Basics</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Data Science</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"> Ask a Question</a>
-                </li>
-            </ul>
-        </div>
+            <section class ="Ask-Question">
+                <h2>Ask Your Question</h2>
+                <input type="text" name="questionField" id="question" placeholder="Type your Question here.... (e.g., What are Derivatives?)" />
+                <div class ="upload">
+                    <img src="" alt="" />
+                    <h3>Upload a picture of your question</h3>
+                    <p>have a homework problem, diagram or handwritten question? upload it here!</p>
+                    <input type="file" placeholder="Choose Image"/>
+                    <p>supported formats</p>
+                </div>
+            </section>
+            <section class =" popular-questions">
+                <h3>Popular Questions</h3>
+                <div>
+                    <p>What is pythagerean therorem?</p>
+                    <label >Mathematices</label>
+                </div>
+            </section>
+
+           
+        </>
     )
+
 }
-export default NavigationvBar
+
+
+
+
+
+
