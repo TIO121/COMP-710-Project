@@ -1,57 +1,88 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    top: 0px;
+    position: sticky;
+    padding: 15px 150px;
+    background-color: white;
+    z-index: 1000;
+  
 
-import "./navigationBar.css"
-function NavigationvBar(){
-    return(
-        <div class="navbar">
-            <div class ="Logo">
-               <a href="#">LearnHub</a>
-            </div>
-            <ul class ="nav-links">
-                <li class= "dropdown">
-                    <a href="#">Mathematics <span class="arrow"> ^</span> </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Algebra</a></li>
-                        <li><a href="#">Calculus</a></li>
-                        <li><a href="#">Geometry</a></li>
-                    </ul>
-                </li>
-                  <li class= "dropdown">
-                    <a href="#">Science</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Physics</a></li>
-                        <li><a href="#">Chemistry</a></li>
-                        <li><a href="#">Biology</a></li>
-                    </ul>
-                </li>
-                  <li class= "dropdown">
-                    <a href="#">History</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Ancient History</a></li>
-                        <li><a href="#">Medival History</a></li>
-                        <li><a href="#">Modern History</a></li>
-                    </ul>
-                </li>
-                  <li class= "dropdown">
-                    <a href="#">Languages</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">Spanish</a></li>
-                        <li><a href="#">French</a></li>
-                    </ul>
-                </li>
-                  <li class= "dropdown">
-                    <a href="#">Computer Science</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Programming Basics</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Data Science</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"> Ask a Question</a>
-                </li>
-            </ul>
-        </div>
-    )
 }
-export default NavigationvBar
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    
+    
+}
+.nav-links li{
+    position: relative;
+      
+}
+
+.nav-links a{
+    max-width: 200px;
+    width: 150px;
+    padding: 5px 15px 5px 10px;
+    border-radius: 5px;
+    text-align: left;
+    color: black;
+    font-weight: 500;
+    font-size: 17px;
+    
+}
+
+.nav-links a:hover{
+    background-color: lightgrey;
+
+}
+
+.arrow{
+    display: inline-block;
+    position: absolute;
+    left: 110px;
+    bottom: 1px;
+    transform: rotate(180deg);
+    font-size: larger;
+    font-weight: 500;
+}
+
+
+
+.dropdown-menu{
+    display: none;
+    list-style: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: .5px solid lightgray;
+    border-radius: 10px;
+    position: absolute;
+    padding: 0px;
+    top: 100%;
+    z-index: 1000;
+    background-color: white;
+    width: 200px;
+
+}
+.dropdown-menu li {
+    padding: 0 15px;
+    position: relative;
+}
+.dropdown-menu a{
+    display: block;
+    width: 200px;
+    padding: 10px 5px, 5px, 15px;
+    margin-top: 5px;
+}
+.dropdown-menu a:hover{
+    background-color: lightgray;
+    display: block;
+    
+
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+

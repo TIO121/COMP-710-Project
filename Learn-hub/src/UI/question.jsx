@@ -1,80 +1,57 @@
-import { useState } from "react";
-import Sidebar from './sidebar.jsx';
-import axios from "axios";
 
-export function AskQuestion() {
-  const [question, setQuestion] = useState("");
-  const [answer, setAnswer] = useState("");
-  const [subject, setSubject] = useState("Mathematics"); // default subject
-
-  const handleSubmit = async () => {
-    if (!question) return;
-
-    try {
-      const res = await axios.post("http://localhost:3001/ask", {
-        question,
-        subject,
-      });
-      setAnswer(res.data.answer);
-    } catch (err) {
-      console.error(err);
-      setAnswer("Error fetching answer. Try again.");
-    }
-  };
-
-  return (
-    <div style={{ display: "flex", minHeight: "100vh", minWidth: "100vw" }}>
-      <div style={{ flex: 1, padding: "20px" }}>
-        <section className="heading">
-          <h1>Ask a Question</h1>
-          <p>Get instant answers to your study questions</p>
-          <div className="Toggle">
-            <label>Ask Question</label>
-            <label>Browse Q/A</label>
-          </div>
-        </section>
-
-        <section className="Ask-Question">
-          <h2>Ask Your Question</h2>
-          <select value={subject} onChange={(e) => setSubject(e.target.value)}>
-            <option>Mathematics</option>
-            <option>Computer Science</option>
-            <option>History</option>
-            <option>Science</option>
-            <option>Languages</option>
-          </select>
-          <input
-            type="text"
-            name="questionField"
-            id="question"
-            placeholder="Type your Question here...."
-            value={question}
-            onChange={(e) => setQuestion(e.target.value)}
-          />
-          <button onClick={handleSubmit}>Ask</button>
-
-          {answer && (
-            <div className="answer">
-              <h3>Answer:</h3>
-              <p>{answer}</p>
+import "./navigationBar.css"
+function NavigationvBar(){
+    return(
+        <div class="navbar">
+            <div class ="Logo">
+               <a href="#">LearnHub</a>
             </div>
-          )}
-
-          <div className="upload">
-            <h3>Upload a picture of your question</h3>
-            <input type="file" />
-            <p>Supported formats: JPG, PNG</p>
-          </div>
-        </section>
-
-        <section className="popular-questions">
-          <h3>Popular Questions</h3>
-          <div>
-            <p>What is Pythagorean theorem?</p>
-            <label>Mathematics</label>
-          </div>
-        </section>
-      </div>
-    </div>
-  );
+            <ul class ="nav-links">
+                <li class= "dropdown">
+                    <a href="#">Mathematics <span class="arrow"> ^</span> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Algebra</a></li>
+                        <li><a href="#">Calculus</a></li>
+                        <li><a href="#">Geometry</a></li>
+                    </ul>
+                </li>
+                  <li class= "dropdown">
+                    <a href="#">Science</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Physics</a></li>
+                        <li><a href="#">Chemistry</a></li>
+                        <li><a href="#">Biology</a></li>
+                    </ul>
+                </li>
+                  <li class= "dropdown">
+                    <a href="#">History</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Ancient History</a></li>
+                        <li><a href="#">Medival History</a></li>
+                        <li><a href="#">Modern History</a></li>
+                    </ul>
+                </li>
+                  <li class= "dropdown">
+                    <a href="#">Languages</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Spanish</a></li>
+                        <li><a href="#">French</a></li>
+                    </ul>
+                </li>
+                  <li class= "dropdown">
+                    <a href="#">Computer Science</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Programming Basics</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Data Science</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"> Ask a Question</a>
+                </li>
+            </ul>
+        </div>
+    )
 }
+export default NavigationvBar
