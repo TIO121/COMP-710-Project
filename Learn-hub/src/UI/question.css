@@ -1,0 +1,148 @@
+
+/* Heading Section */
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-left: 100px;
+}
+
+.heading h1{
+
+    font-size: 45px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+}
+
+.heading p{
+    color: rgb(81, 81, 81);
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+
+/* Ask Question Second */
+
+.Ask-Question{
+    margin-top: 30px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    
+    padding: 20px 20px 20px 35px;
+    width: 85vw;
+}
+
+.Ask-Question h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+
+}
+.questionInput{
+    display: flex;
+    flex-direction: row;
+}
+
+.questionInput input{
+    background-color: rgba(67, 67, 67, 0.109);
+    padding: 15px 0px 10px 15px;
+    border: 0px;
+    border-radius: 10px;
+    height: 15px;
+    width: 1000px;
+    max-height: 50;
+}
+.questionInput button{
+    margin-left: 30px;
+    border: 0px;
+    border-radius: 10px;
+    width: 85px;
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+    background-color: black;
+    color: white ;
+    font-size: 14px;
+    font-weight: 600;
+}
+.questionInput button:hover{
+    background-color: rgba(0, 0, 0, 0.764);
+}
+
+
+/* input photo */
+.upload{
+    margin-top: 15px;
+    border-style: dashed;
+    border-radius: 10px;
+    border-color: rgba(67, 67, 67, 0.109);;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+/* popular-questions Section */
+.popular-questions{
+    margin-left: 100px;
+    margin-top: 30px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: rgba(67, 67, 67, 0.109); 
+    display: flex;
+    flex-direction: column;
+    padding: 15px 35px 20px 20px;
+    max-width: 85vw;
+}
+
+h3{
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+}
+
+
+.popular-questions h3{
+    margin-left: 10px;
+}
+
+/* Question Cards */
+.questionCard{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(67, 67, 67, 0.109);
+    border-radius: 10px;
+    padding: 2.5px 2.5px 2.5px 10px;
+}
+.questionCard:hover{
+    background-color: rgba(67, 67, 67, 0.109);
+    cursor: pointer;
+}
+
+
+
+.popular-questions p {
+    margin: 10px 500px 10px 10px;
+    color: black;
+    font-weight: 500;
+}
+.popular-questions label{
+    background-color: rgba(67, 67, 67, 0.109);
+    border-radius: 10px;
+    padding: 5px 10px 0px 10px;
+    text-align: center;
+    height: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 10px 0px 0px 750px;
+}
