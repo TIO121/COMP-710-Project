@@ -1,6 +1,7 @@
-import  "./mainPage.css"
-
+import  "./homePage.css"
+import { Navigate, useNavigate } from "react-router-dom"
 function Homepage(){
+    const navigate = useNavigate()
     return(
        <>
          <section class= "hero">
@@ -64,7 +65,7 @@ function Homepage(){
             
             <h3 >Ready to start your learning journey? </h3>
             <p>Choose a subject from the navigation menu above and dive into comprehensive lessons designed to help you master any topic.</p>
-            <button class = "journey-button">Browse All Topics</button>
+            <button class = "journey-button" onClick={() =>window.scrollTo({top: 0, behavior: 'smooth'})}>Browse All Topics</button>
         </section>
 
        </>

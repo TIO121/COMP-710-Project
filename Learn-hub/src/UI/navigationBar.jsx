@@ -1,17 +1,23 @@
 import "./navigationBar.css"
 import logo from "../assets/logo.png"
+import { Navigate, useNavigate } from "react-router-dom"
 
 function NavigationvBar(){
+    const navigate = useNavigate()
+    const toIndex = () => { 
+        navigate('/'); 
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
     return(
         <div class="navbar">
             <div class ="Logo">
-               <a href="#" class = "brand">
+               <a href="#" class = "brand" onClick={toIndex}>
                 <img src={logo} alt="LearnHub Logo" class="brand-logo" />
                 LearnHub</a>
             </div>
             <ul class ="nav-links">
                 <li class= "dropdown">
-                    <a href="#">
+                    <a href="#" >
                         <span class="nav-icon">📐</span>
                         Mathematics <span class="arrow">▼</span>
                     </a>
@@ -65,7 +71,7 @@ function NavigationvBar(){
                     </ul>
                 </li>
                 <li>
-                    <a href="#"> 
+                    <a href="#" onClick={()=>navigate("/question")}> 
                         <span class="nav-icon">💬</span>
                         Ask a Question</a>
                 </li>
