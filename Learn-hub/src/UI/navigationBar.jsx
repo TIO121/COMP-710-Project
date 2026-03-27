@@ -8,6 +8,15 @@ function NavigationvBar(){
         navigate('/'); 
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
+    const toAlgebra = () => {
+        navigate('/algebra')
+    }
+    const toCalculus = () =>{
+        navigate('/calculus')
+    }
+    const toGeometry = () =>{
+        navigate('/geometry')
+    }
     return(
         <div class="navbar">
             <div class ="Logo">
@@ -22,9 +31,9 @@ function NavigationvBar(){
                         Mathematics <span class="arrow">▼</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Algebra</a></li>
-                        <li><a href="#">Calculus</a></li>
-                        <li><a href="#">Geometry</a></li>
+                        <li onClick={toAlgebra}><a href="#">Algebra</a></li>
+                        <li onClick={toCalculus}><a href="#">Calculus</a></li>
+                        <li onClick={toGeometry}><a href="#">Geometry</a></li>
                     </ul>
                 </li>
                   <li class= "dropdown">

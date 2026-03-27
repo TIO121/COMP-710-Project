@@ -7,7 +7,9 @@ import './index.css'
 import NavigationvBar from './UI/navigationBar.jsx'
 import Homepage from './UI/homePage.jsx'
 import { AskQuestion } from './UI/question.jsx'
-
+import { Algebra } from './UI/math/algebra.jsx';
+import { Calculus } from './UI/math/calculus.jsx';
+import { Geometry } from './UI/math/geometry.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -16,6 +18,9 @@ createRoot(document.getElementById('root')).render(
       <Routes>
           <Route index element = {<><NavigationvBar/> <Homepage/> </>}/>
           <Route path="/question" element ={<><NavigationvBar/><AskQuestion/></>} />
+          <Route path='/algebra' element =  {<><NavigationvBar/><Algebra/></>}/>
+          <Route path='/calculus' element = {<><NavigationvBar/><Calculus/></>} />
+          <Route path='/geometry' element ={<><NavigationvBar/><Geometry/></>}/>
       </Routes>
     </Router>
   </StrictMode>,
