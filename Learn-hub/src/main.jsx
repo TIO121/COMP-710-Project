@@ -10,6 +10,14 @@ import { AskQuestion } from './UI/question.jsx'
 import { Algebra } from './UI/math/algebra.jsx';
 import { Calculus } from './UI/math/calculus.jsx';
 import { Geometry } from './UI/math/geometry.jsx';
+import { Physics } from './UI/science/physics.jsx';
+import { Chemistry } from './UI/science/chemistry.jsx';
+import { Biology } from './UI/science/biology.jsx';
+import { Ancient } from './UI/history/ancient.jsx';
+import { Medieval } from './UI/history/medieval.jsx';
+import { Modern } from './UI/history/modern.jsx';
+import { English } from './UI/languages/english.jsx';
+import { Programming } from './UI/computerscience/programming.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -21,6 +29,15 @@ createRoot(document.getElementById('root')).render(
           <Route path='/algebra' element =  {<><NavigationvBar/><Algebra/></>}/>
           <Route path='/calculus' element = {<><NavigationvBar/><Calculus/></>} />
           <Route path='/geometry' element ={<><NavigationvBar/><Geometry/></>}/>
+          <Route path='/physics' element ={<><NavigationvBar/><Physics/></>}/>
+          <Route path='/chemistry' element ={<><NavigationvBar/><Chemistry/></>}/>
+          <Route path='/biology' element ={<><NavigationvBar/><Biology/></>}/>
+            <Route path='/ancient' element ={<><NavigationvBar/><Ancient/></>}/>
+          <Route path='/medieval' element ={<><NavigationvBar/><Medieval/></>}/>
+          <Route path='/modern' element ={<><NavigationvBar/><Modern/></>}/>
+          <Route path='/english' element ={<><NavigationvBar/><English/></>}/>
+          <Route path='/programming' element ={<><NavigationvBar/><Programming/></>}/>
+
       </Routes>
     </Router>
   </StrictMode>,

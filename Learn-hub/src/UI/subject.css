@@ -1,10 +1,10 @@
-.MathMain{
+.subjectMain{
     display: flex;
     flex-direction: column;
     padding: 50px;
     margin-left: 50px;
 }
-.MathMain h1{
+.subjectMain h1{
     font-size: 37px;
     font-weight: 600;
     color: black;
@@ -12,28 +12,28 @@
     margin: 0;
 }
 
-.MathMain h2{
+.subjectMain h2{
     font-size: 15px;
     font-weight: 600;
     color: black;
     padding: 0;
     margin: 0px;
 }
-.MathMain p{
+.subjectMain p{
     font-size: 15px;
     font-weight: 500;
     color: #717070;
     padding: 0;
     margin: 0px;
 }
-.MathMain section{
+.subjectMain section{
     display: flex;
     flex-direction: column;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     padding: 10px;
 }
-.MathIntroduction p{
+.subjectIntroduction p{
     color: black;
 }
 .conceptCard{

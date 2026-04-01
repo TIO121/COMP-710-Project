@@ -1,4 +1,5 @@
-import "./math.css"
+import "../subject.css"
+import Quiz from "./quiz"
 
 
 export function Algebra(){
@@ -6,22 +7,22 @@ export function Algebra(){
     
     return(
         <>
-            <div className="MathMain">
+            <div className="subjectMain">
                 <h1>Algebra</h1>
                 <p>Master the fundamentals of algebra, from basic equations to complex polynomials</p>
-                <section className="MathIntroduction">
+                <section className="subjectIntroduction">
                     <h2>Introduction to Algebra</h2>
-                    <p>Algebra is a branch of mathematics that uses symbols and letters to represent numbers and quantities in formulas and equations. It's the foundation for advanced mathematics and is used extensively in science, engineering, and everyday problem-solving.</p>
+                    <p>Algebra is a branch of subjectematics that uses symbols and letters to represent numbers and quantities in formulas and equations. It's the foundation for advanced subjectematics and is used extensively in science, engineering, and everyday problem-solving.</p>
 
                 </section>
-                <section className="MathConcept">
+                <section className="ConceptCard">
                     <h2>Basic Concepts</h2>
-                    <div className="ConceptCard">
+                    <div className="AlgebraConceptCard">
                         <h2>Variiables</h2>
                         <p>Variables are symbols (usually letters) that represent unknown values. For example, in the equation x + 5 = 10, x is a variable that equals 5.</p>
                     </div>
                 </section>
-                <section className="MathSolvingExample">
+                <section className="exampleCard">
                     <h2>Solving Linear Equations</h2>
                     <p>To solve a linear equation, isolate the variable on one side of the equation:</p>
                     <p>Example: 2x + 6 = 14</p>
@@ -30,13 +31,16 @@ export function Algebra(){
                     <p>Step 2: Divide both sides by 2</p>
                     <p>x = 4</p>
                 </section>
-                <section className="MathPracticeProblems">
+                <section className="practiceProblems">
                     <div>
                         <p>1. Solve for x: 3x - 5 = 16</p> <p>Answers: x=7</p>
                     </div>
                 </section>
-                <section className="MathFormulas">
+                <section className="subjectFormulas">
                     <div className="FormulaCard"><p>Distributive proerty:  a(b + c) = ab + ac</p></div>
+                </section>
+                <section className="subjectQuiz">
+                    <Quiz/>
                 </section>
             </div>
         </>
