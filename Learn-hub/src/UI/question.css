@@ -76,6 +76,34 @@
 .questionInput button:hover{
     background-color: rgba(0, 0, 0, 0.764);
 }
+.questionInput button:disabled{
+    background-color: rgba(0, 0, 0, 0.45);
+    cursor: not-allowed;
+}
+
+.questionError{
+    color: rgb(190, 30, 30);
+    font-weight: 600;
+    margin: 12px 0 0 0;
+}
+
+.answerBox{
+    margin-top: 18px;
+    border: 1px solid rgba(67, 67, 67, 0.109);
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(67, 67, 67, 0.045);
+}
+
+.answerBox h3{
+    margin-top: 0;
+}
+
+.answerBox p{
+    color: black;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
 
 
 /* input photo */
@@ -88,6 +116,11 @@
     flex-direction: column;
     align-items: center;
     
+}
+
+.imageStatus{
+    color: rgb(81, 81, 81);
+    font-weight: 600;
 }
 
 
